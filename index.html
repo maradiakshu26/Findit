@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FindIt — Lost & Found Portal</title>
+  <link rel="stylesheet" href="public/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<nav class="navbar">
+
+  <!-- LOGO -->
+  <a href="index.html" class="logo">
+    Find<span>It</span>
+  </a>
+
+  <!-- NAV LINKS -->
+  <div class="nav-links">
+    <a href="pages/lost.html">Lost Items</a>
+    <a href="pages/found.html">Found Items</a>
+    <a href="pages/post.html" class="btn-post">+ Post Item</a>
+    <a href="pages/login.html" class="btn-login">Login</a>
+  </div>
+
+</nav>
+<!-- HERO SECTION -->
+<section class="hero">
+
+  <!-- BADGE -->
+  <div class="hero-badge">
+    🔍 Community-Powered Platform
+  </div>
+
+  <!-- HEADING -->
+  <h1>
+    Lost something? <br/>
+    <span>We'll help you find it.</span>
+  </h1>
+
+  <!-- SUBTITLE -->
+  <p class="hero-subtitle">
+    Post lost or found items and connect
+    with your community to reunite belongings
+    with their owners.
+  </p>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search for an item (e.g. black wallet, iPhone...)"
+    />
+    <button onclick="searchItems()">Search</button>
+  </div>
+
+  <!-- STATS -->
+  <div class="hero-stats">
+    <div class="stat">
+      <strong>1,240+</strong>
+      <span>Items Posted</span>
+    </div>
+    <div class="stat">
+      <strong>890+</strong>
+      <span>Items Reunited</span>
+    </div>
+    <div class="stat">
+      <strong>5,000+</strong>
+      <span>Users</span>
+    </div>
+  </div>
+</section>
+<!-- CATEGORIES -->
+<section class="categories">
+
+  <h2>Browse by Category</h2>
+
+  <div class="category-grid">
+
+    <div class="cat-card" onclick="filterCategory('Electronics')">
+      <span class="cat-icon">📱</span>
+      <span class="cat-name">Electronics</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Wallet')">
+      <span class="cat-icon">👛</span>
+      <span class="cat-name">Wallet</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Keys')">
+      <span class="cat-icon">🔑</span>
+      <span class="cat-name">Keys</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Bags')">
+      <span class="cat-icon">🎒</span>
+      <span class="cat-name">Bags</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Pets')">
+      <span class="cat-icon">🐾</span>
+      <span class="cat-name">Pets</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Documents')">
+      <span class="cat-icon">📄</span>
+      <span class="cat-name">Documents</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Jewellery')">
+      <span class="cat-icon">💍</span>
+      <span class="cat-name">Jewellery</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Clothing')">
+      <span class="cat-icon">👕</span>
+      <span class="cat-name">Clothing</span>
+    </div>
+
+    <div class="cat-card" onclick="filterCategory('Other')">
+      <span class="cat-icon">📦</span>
+      <span class="cat-name">Other</span>
+    </div>
+</section>
+
+
+  <!-- RECENT POSTS -->
+
+<section class="recent-posts">
+
+  <!-- SECTION HEADER -->
+  <div class="section-header">
+    <h2>Recent Listings</h2>
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('all', this)">All</button>
+      <button class="tab" onclick="switchTab('lost', this)">Lost</button>
+      <button class="tab" onclick="switchTab('found', this)">Found</button>
+    </div>
+  </div>
+
+  <!-- ITEMS GRID -->
+  <div class="items-grid" id="itemsGrid">
+    <!-- Cards will be added by JavaScript -->
+  </div>
+
+  <!-- VIEW ALL BUTTON -->
+  <div class="view-all">
+    <a href="pages/lost.html" class="btn-outline">View All Items →</a>
+  </div>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works">
+
+  <h2>How It Works</h2>
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-icon">📝</div>
+      <h3>Post Your Item</h3>
+      <p>Fill in details about what you
+        lost or found — add a photo,
+        location and description.</p>
+    </div>
+
+    <div class="step-arrow">→</div>
+
+    <div class="step">
+      <div class="step-icon">🔍</div>
+      <h3>Search and Match</h3>
+      <p>Our AI matches lost posts with
+        found posts automatically
+        and notifies you.</p>
+    </div>
+
+    <div class="step-arrow">→</div>
+
+    <div class="step">
+      <div class="step-icon">🤝</div>
+      <h3>Connect and Reunite</h3>
+      <p>Contact the poster securely
+        and arrange to return
+        the item.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <!-- LEFT SIDE — Logo and description -->
+    <div class="footer-left">
+      <a href="index.html" class="logo">Find<span>It</span></a>
+      <p>Reuniting people with their belongings,
+        one post at a time.</p>
+    </div>
+
+    <!-- RIGHT SIDE — Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="pages/lost.html">Lost Items</a>
+      <a href="pages/found.html">Found Items</a>
+      <a href="pages/post.html">Post Item</a>
+      <a href="pages/login.html">Login</a>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2025 FindIt. Built with ❤️ for the community.</p>
+  </div>
+
+</footer>
+
+</section>
+
+  <script src="public/js/main.js"></script>
+  <script src="public/js/api.js"></script>
+</body>
+</html>
