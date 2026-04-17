@@ -17,7 +17,11 @@ dotenv.config();
 //  STEP 3 — Create app
 // ===========================
 
+
+const express = require('express');
 const app = express();
+
+app.use(express.static('public'));   // 👈 ADD HERE
 
 // ===========================
 //  STEP 4 — Add middleware
