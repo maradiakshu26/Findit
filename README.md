@@ -2,50 +2,85 @@
 
 ## 📌 Overview
 
-**FindIt** is a web-based Lost & Found application that helps users report lost items and post found items. The platform makes it easier to reconnect people with their belongings through a simple and user-friendly interface.
+**FindIt** is a web-based Lost & Found system that helps users report lost items and post found items. It provides a simple platform to reconnect people with their belongings efficiently.
 
 ---
 
-## 🚀 Features
+## ✨ Features
 
-### 👤 User Features
-
-* User-friendly interface
-* Report lost items with details
+* Report lost items
 * Post found items
-* View all lost & found listings
-* Search for items
-* Upload item images
-
----
-
-### ⚙️ System Features
-
-* Backend server using Node.js & Express
-* Database integration for storing item details
-* REST API handling requests
-* Environment-based configuration
+* View all listings
+* Search functionality
+* Image upload support
+* Node.js backend with database integration
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-* HTML
-* CSS
-* JavaScript
-
-### Backend
-
-* Node.js
-* Express.js
-
-### Database
-
-* MySQL 
+* **Frontend:** HTML, CSS, JavaScript
+* **Backend:** Node.js, Express.js
+* **Database:** MySQL
 
 ---
+
+## 📸 Screenshots
+
+### 🏠 Home Page
+
+---
+
+### ➕ Lost Item page
+
+---
+
+### 📦 Found Items Page
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+git clone https://github.com/maradiakshu26/Findit.git
+cd findit/backend
+npm install
+node server.js
+```
+
+---
+
+## 🌟 How It Works
+
+* Users submit lost or found items through the frontend
+* Backend APIs handle requests
+* Data is stored in the database
+* Users can browse and search items
+
+---
+
+## 🚀 Future Enhancements
+
+* User login & authentication
+* Real-time notifications
+* Chat system
+* AI-based matching
+
+---
+
+## ⚠️ Important Notes
+
+* Do NOT upload:
+
+  * node_modules/
+  * .env
+
+---
+
+## 👨‍💻 Author
+
+* Your Name
+* https://github.com/maradiakshu26
 
 ## 📂 Project Structure
 
