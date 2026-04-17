@@ -1,5 +1,4 @@
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 // ===========================
 //  STEP 1 — Import packages
 // ===========================
@@ -68,3 +67,6 @@ app.listen(PORT, function() {
   console.log('🌍 URL  : http://localhost:' + PORT);
   console.log('================================');
 });
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
