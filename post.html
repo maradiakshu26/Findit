@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Item — FindIt</title>
+  <link rel="stylesheet" href="../public/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Find<span>It</span></a>
+    <div class="nav-links">
+      <a href="lost.html">Lost Items</a>
+      <a href="found.html">Found Items</a>
+      <a href="post.html" class="btn-post">+ Post Item</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+  </nav>
+
+  <!-- FORM SECTION -->
+  <div class="page-wrapper">
+
+    <h1 class="page-title">Post an Item</h1>
+    <p class="page-subtitle">
+      Fill in the details below. The more
+      info you add, the better the chance
+      of a match!
+    </p>
+
+    <div class="form-card">
+
+      <!-- LOST / FOUND TOGGLE -->
+      <div class="toggle-group">
+        <button
+          class="toggle-btn lost active"
+          id="btn-lost"
+          onclick="setType('lost')">
+          🔴 I Lost Something
+        </button>
+        <button
+          class="toggle-btn found"
+          id="btn-found"
+          onclick="setType('found')">
+          🟢 I Found Something
+        </button>
+      </div>
+
+      <!-- TITLE -->
+      <div class="form-group">
+        <label for="title">Item Title *</label>
+        <input
+          type="text"
+          id="title"
+          placeholder="e.g. Black leather wallet, iPhone 13..."/>
+      </div>
+
+      <!-- CATEGORY -->
+      <div class="form-group">
+        <label for="category">Category *</label>
+        <select id="category">
+          <option value="">Select a category</option>
+          <option value="Electronics">📱 Electronics</option>
+          <option value="Wallet">👛 Wallet</option>
+          <option value="Keys">🔑 Keys</option>
+          <option value="Bags">🎒 Bags</option>
+          <option value="Pets">🐾 Pets</option>
+          <option value="Documents">📄 Documents</option>
+          <option value="Jewellery">💍 Jewellery</option>
+          <option value="Other">📦 Other</option>
+        </select>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea
+          id="description"
+          placeholder="Describe the item — colour, size,
+brand, any unique features...">
+        </textarea>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="form-group">
+        <label for="location">Location *</label>
+        <input
+          type="text"
+          id="location"
+          placeholder="Where was it lost/found?"/>
+      </div>
+
+      <!-- DATE -->
+      <div class="form-group">
+        <label for="date">Date *</label>
+        <input type="date" id="date"/>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="form-group">
+        <label for="contact">Your Contact Email *</label>
+        <input
+          type="email"
+          id="contact"
+          placeholder="email@example.com"/>
+      </div>
+
+      <!-- PHOTO -->
+      <div class="form-group">
+        <label for="photo">
+          Upload Photo (optional)
+        </label>
+        <input
+          type="file"
+          id="photo"
+          accept="image/*"/>
+      </div>
+
+      <!-- STATUS MESSAGE -->
+      <div id="statusMsg" class="status-msg"></div>
+
+      <!-- SUBMIT BUTTON -->
+      <button
+        class="btn-submit"
+        onclick="submitPost()">
+        🚀 Submit Post
+      </button>
+
+    </div>
+  </div>
+
+  <script src="../public/js/api.js"></script>
+  <script src="../public/js/main.js"></script>
+  <!--<script src="../public/js/auth.js"></script>-->
+  <script src="../public/js/post.js"></script>
+</body>
+</html>

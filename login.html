@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — FindIt</title>
+  <link rel="stylesheet" href="../public/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Find<span>It</span></a>
+    <div class="nav-links">
+      <a href="lost.html">Lost Items</a>
+      <a href="found.html">Found Items</a>
+      <a href="post.html" class="btn-post">+ Post Item</a>
+    </div>
+  </nav>
+
+  <!-- LOGIN SECTION -->
+  <div class="auth-wrapper">
+    <div class="auth-card">
+
+      <!-- HEADING -->
+      <h2>Welcome back 👋</h2>
+      <p class="auth-subtitle">
+        Login to post items and
+        manage your listings.
+      </p>
+
+      <!-- ERROR MESSAGE -->
+      <div class="auth-msg error" id="errorMsg"></div>
+
+      <!-- SUCCESS MESSAGE -->
+      <div class="auth-msg success" id="successMsg"></div>
+
+      <!-- EMAIL -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <div class="input-wrap">
+          <span class="input-icon">📧</span>
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"/>
+        </div>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">🔒</span>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"/>
+        </div>
+        <a href="#" class="forgot-link">
+          Forgot password?
+        </a>
+      </div>
+
+      <!-- LOGIN BUTTON -->
+      <button class="btn-submit" onclick="handleLogin()">
+        Login
+      </button>
+
+      <!-- DIVIDER -->
+      <div class="auth-divider">
+        <span>or</span>
+      </div>
+
+      <!-- GOOGLE LOGIN -->
+      <button class="btn-google" onclick="googleLogin()">
+        <img
+          src="https://www.google.com/favicon.ico"
+          width="18"
+          height="18"
+          alt="Google"/>
+        Continue with Google
+      </button>
+
+      <!-- REGISTER LINK -->
+      <p class="auth-link">
+        Don't have an account?
+        <a href="register.html">Sign up free</a>
+      </p>
+
+    </div>
+  </div>
+
+  <script src="../public/js/api.js"></script>
+  <script src="../public/js/login.js"></script>
+</body>
+</html>

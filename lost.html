@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lost Items — FindIt</title>
+  <link rel="stylesheet" href="../public/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="../index.html" class="logo">Find<span>It</span></a>
+    <div class="nav-links">
+      <a href="lost.html" class="nav-active">Lost Items</a>
+      <a href="found.html">Found Items</a>
+      <a href="post.html" class="btn-post">+ Post Item</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </div>
+  </nav>
+
+  <!-- PAGE CONTENT -->
+  <div class="listings-page">
+
+    <!-- PAGE HEADER -->
+    <div class="listings-header">
+      <h1>🔴 Lost Items</h1>
+      <a href="post.html" class="btn-outline">
+        + Report Lost Item
+      </a>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+
+      <input
+        type="text"
+        id="searchFilter"
+        placeholder="🔍 Search items..."
+        oninput="applyFilters()"/>
+
+      <select id="categoryFilter" onchange="applyFilters()">
+        <option value="">All Categories</option>
+        <option value="Electronics">📱 Electronics</option>
+        <option value="Wallet">👛 Wallet</option>
+        <option value="Keys">🔑 Keys</option>
+        <option value="Bags">🎒 Bags</option>
+        <option value="Pets">🐾 Pets</option>
+        <option value="Documents">📄 Documents</option>
+        <option value="Jewellery">💍 Jewellery</option>
+        <option value="Other">📦 Other</option>
+      </select>
+
+      <select id="sortFilter" onchange="applyFilters()">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+      </select>
+
+    </div>
+
+    <!-- RESULTS COUNT -->
+    <p class="results-count" id="resultsCount"></p>
+
+    <!-- ITEMS GRID -->
+    <div class="items-grid" id="itemsGrid"></div>
+
+  </div>
+
+  <script src="../public/js/api.js"></script>
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/lost.js"></script>
+</body>
+</html>
