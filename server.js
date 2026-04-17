@@ -59,6 +59,8 @@ app.get('/api/health', function(req, res) {
 // ===========================
 
 const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
 
 app.listen(PORT, function() {
   console.log('================================');
@@ -68,5 +70,4 @@ app.listen(PORT, function() {
   console.log('================================');
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
