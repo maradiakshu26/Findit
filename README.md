@@ -1,5 +1,15 @@
 # 🔍 FindIt – Lost & Found Web Application
 
+<p align="center">
+  <img src="https://img.shields.io/github/stars/maradiakshu26/Findit?style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/maradiakshu26/Findit?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/maradiakshu26/Findit?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Live%20Demo-Coming%20Soon-orange?style=for-the-badge" />
+</p>
+
 ## 📌 Overview
 
 **FindIt** is a web-based Lost & Found system that helps users report lost items and post found items. It provides a simple platform to reconnect people with their belongings efficiently.
