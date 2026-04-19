@@ -50,7 +50,7 @@ async function handleRegister() {
       showMsg('success', '✅ Account created! Redirecting...');
 
       setTimeout(() => {
-        window.location.href = "/pages/login.html";
+        window.location.href = "/login.html";
       }, 1500);
 
     } else {
