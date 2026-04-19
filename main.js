@@ -1,6 +1,6 @@
 // Filter by category
 function filterCategory(category) {
-  window.location.href = 'pages/lost.html?category=' + category;
+  window.location.href = 'lost.html?category=' + category;
 }
 
 // Search items
@@ -10,7 +10,7 @@ function searchItems() {
     alert('Please type something to search!');
     return;
   }
-  window.location.href = 'pages/lost.html?search=' + query;
+  window.location.href = 'lost.html?search=' + query;
 }
 
 // ========================
@@ -101,7 +101,7 @@ function renderItems(items) {
   }
 
   grid.innerHTML = items.map(function(item) {
-    return '<a href="pages/item.html?id=' + item.id + '" class="item-card">' +
+    return '<a href="item.html?id=' + item.id + '" class="item-card">' +
       '<div class="card-image">' + item.icon + '</div>' +
       '<div class="card-body">' +
         '<div class="card-tags">' +
